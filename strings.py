@@ -21,7 +21,9 @@ print(type(user_name))
 print(type(user_name), user_name)
 
 #You cant add a string and integer
-# print("2" + 2)
+# print("2" + 2) -> TypeError: can only concatenate str (not "int") to str
+# print("2" + "2") -> give 22 as a string not integer
+# print(2 + 2) -> gives 4 as an integer
 
 # INDEXING
 
@@ -101,4 +103,4 @@ string4 = "###Cisco Router###"
 print(string4.strip("#"))
 
 # 9. replace() -> replaces a specified character with a given character
-print(string3.replace(" ", " "))
+print(string3.replace(" ", ""))
