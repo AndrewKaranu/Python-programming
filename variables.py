@@ -24,5 +24,5 @@ a = 6
 print(a)
 
 _a = 2
-# 2a = 4  - lien of code with error
+# 2a = 4  - line of code with error
 a2 = 6

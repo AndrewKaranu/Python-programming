@@ -5,7 +5,7 @@
 # print(first_name + " " + last_name)
 
 # first_name = input("Enter your first name: ")
-# last_name = input("Enter your second name: ")
+# last_name = input("Enter your last name: ")
 # print(first_name + " " + last_name)
 
 # string formatting
@@ -17,6 +17,9 @@
 
 # format()
 # print("My name is: {first} {last}.".format( last=last_name, first=first_name))
+# print("_".join("My name is: {first} {last}.".format( last=last_name, first=first_name))) -> Adding a join function
+
+
 # first_name = "Andrew"
 # last_name = "Karanu"
 # user_names = input("please....: ")
