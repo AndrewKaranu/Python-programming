@@ -29,11 +29,3 @@ a2 = 6
 
 # Global variables -> Variables that are created outside of a function
 x = "awesome"
-
-def myfunc():
-global x
-  x = "fantastic"
-
-myfunc()
-
-print("Python is " + x)
