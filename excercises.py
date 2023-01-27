@@ -31,8 +31,8 @@
 
 # print("Hello,{name},you have lived {years} years, {days} days, {hours} hours, {minutes} minutes and {age} seconds".format( name=Name, years=int(Age), days=int(Age)*365, hours=int(Age)*365*24, minutes=int(Age)*365*24*60, age=int(Age)*365*24*360))
 
-import math
-# Asks for radius and return the circumfrence
+# import math
+# # Asks for radius and return the circumfrence
 
 # Radius = float(input("What is the radius of the circle?"))
 
@@ -41,8 +41,26 @@ import math
 # \U0001f600 is an example of a code for an emoji
 
 # Make a python program that asks the user for their age and outputs the decades they have lived
-Name = input("what is your name?")
-Age = input("What is your age?") 
-s = "s" if Age > "19" else "" #variable that changes between a decade and decades in the statement
+# Name = input("what is your name?")
+# Age = input("What is your age?") 
+# s = "s" if Age > "19" else "" #variable that changes between a decade and decades in the statement
 
-print("Hello,{name},you have lived {years} decade{s}.".format( name=Name, years=int(Age)//10, s=s))
+# print("Hello,{name},you have lived {years} decade{s}.".format( name=Name, years=int(Age)//10, s=s))
+
+# Write a python prgram that asks the user for scores of 5 subjects and outputs the average score
+
+
+Name = input("what is your name?")
+Math = float(input("What is your math grade?"))
+Physics = float(input("what is your physics grade?"))
+Chemistry = float(input("What is your chemistry grade?"))
+Biology = float(input("What is your biology grade?"))
+Geography = float(input("What is your geography grade?"))
+Sum = float(Math + Physics + Chemistry + Biology + Geography)
+
+Mean = float(Sum/5)
+
+print("Hello,{name},your average grade in the 5 subjects is {grade} %.".format( name=Name, grade=Mean))
+
+
+
