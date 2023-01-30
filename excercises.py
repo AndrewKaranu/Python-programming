@@ -128,4 +128,18 @@ list4 = ["CSS", "SQL", "GO", "Kotlin", "Rust"]
 print(list4[3] , list4.index("Kotlin"))
     
 
+Name = input("what is your name?")
+Math = float(input("What is your math grade?"))
+Physics = float(input("what is your physics grade?"))
+Chemistry = float(input("What is your chemistry grade?"))
+Biology = float(input("What is your biology grade?"))
+Geography = float(input("What is your geography grade?"))
+Sum = float(Math + Physics + Chemistry + Biology + Geography)
+
+Grade_list = [Math, Physics, Chemistry, Biology, Geography]
+print(Grade_list)
+
+Mean = sum(Grade_list)/len(Grade_list)
+
+print("Hello,{name},your average grade in the 5 subjects is {grade} %.".format( name=Name, grade=round(Mean,1)))
 
