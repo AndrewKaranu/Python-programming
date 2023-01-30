@@ -90,5 +90,42 @@ print(sorted(list6, reverse=True))
 print(list6 + list6)
 print(list6 * 3)
 
-# list slicing
+# List slicing-> extracts various parts of a sequence
+List7 = [1, 2, 3, "a", "b", "c"]
+#extracts the first three elements in List7
+print(List7[0:3]) 
+print(List7[-6:-3])
+print(List7[:3])
+print(List7[0:-3])
+# output -> [3, "a", "b"]
+print(List7[2:5])
+print(List7[-4:-1])
+print(List7[2:-1])
+
+# ["a", "b", "c"] using negative indexing
+print(List7[-3:])
+# get the entire list
+print(List7[0:])
+print(List7[-6:])
+print(List7[:])
+
+# [1, 3, "b"]
+print(List7[::2])
+# ['c', 'b', 'a', 3, 2, 1]
+print(List7[::-1])
+# Create a list of numbers 0-12, create a slice that has [0, 2, 4, 6, 8, 10, 12]
+list8 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+print(list8[::2])
+# Create a list of alphabet letters -> ["b", "d", "f", "h", "j", "l"]
+list8 = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l']
+print(list8[1::2])
+
+# Generates letters as a list
+from string import ascii_lowercase
+letters = ascii_lowercase
+print(list(letters))
+print(list(letters)[0:12])
+# Generates numbers
+print(list(range(1,12)))
+
 # SETS

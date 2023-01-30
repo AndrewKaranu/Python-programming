@@ -87,11 +87,11 @@ print(string2.isdigit())
 # isdidit()-> If the string only contains numbers it returns true if not it returns false
 
 # Write a Python program that prints the string s without the character at index n
-def remove_char(str, n): #-> defines our new function
+def remove_ele(str, n): #-> defines our new function
       first_part = str[:n] #-> the start of the string upto the defined index
       last_part = str[n+1:] #-> the defined index +1 which means the defined index is skipped
       return first_part + last_part #-> put the two togther
-print(remove_char(string2, 0)) #Allows you to specify which index you want to exclude
+print(remove_ele(string2, 0)) #Allows you to specify which index you want to exclude
 
 # 8. Write a Python program that prints the string s with the character curr_char replaced by the character new_char.
 string3 = "Python is used in data science"
