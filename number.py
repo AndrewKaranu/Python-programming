@@ -5,11 +5,16 @@ print(type(num1)) #integers
 print(type(num2)) #float
 
 # Operations with numbers
-# 1. addition-> 
-# 2. subtraction->
-# 3. division
-# 4. multiplication
-# 5. integer division
+# 1. addition-> +
+print(13+32)
+# 2. subtraction-> -
+[print(32-13)]
+# 3. division-> /
+print(36/6)
+# 4. multiplication->*
+print(6*6)
+# 5. integer division->//
+
 # 6. raising to a power  -> ** -> 10**2
 # 7. modulo-> finding the remainder of a number -> %
 
@@ -34,7 +39,7 @@ print (b)
 b = 2
 print(int(a))
 
-#  Otehr number functions 
+#  Other number functions 
 # max()-> returns the highest value in the parenthesis
 # min()-> returns the lowest value in the parenthesis
 # abs()-> returns the absolute value of the number in the parenthesis

@@ -1,6 +1,6 @@
 # # list1 = []
 # # print(type(list1), list1, len(list1))
-list1 = ["Cisco", "Juniper", "Avaya", 10, 10.5, -11]
+# list1 = ["Cisco", "Juniper", "Avaya", 10, 10.5, -11]
 # print(list1)
 
 # # Lets find the number of elements in this list

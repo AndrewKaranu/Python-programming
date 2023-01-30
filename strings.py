@@ -85,7 +85,7 @@ print(string2.upper())
 # Upper() and Lower() dont change the initial string. This shows that they are immutable
 
 # 6. startswith()
-print(string2.startswith("S")) #returns true
+print(string2.startswith("C")) #returns true
 print(string2.startswith("x")) #returns false
 # 7. endswith()
 print(string2.endswith("h")) #returns true
@@ -156,7 +156,7 @@ print(".".join(Sliced3))
 
 print(".".join(sliced2.replace("h", "C").upper())) #All the code in one line
 
-# 14. Printing a string in reverse order usimg slicing and step
+# 14. Reverseing order- Printing a string in reverse order usimg slicing and step
 # By setting the step to -1 we can reverse the string
 
 print(string8[::-1])
