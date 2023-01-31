@@ -136,10 +136,22 @@ Biology = float(input("What is your biology grade?"))
 Geography = float(input("What is your geography grade?"))
 Sum = float(Math + Physics + Chemistry + Biology + Geography)
 
-Grade_list = [Math, Physics, Chemistry, Biology, Geography]
-print(Grade_list)
+# Grade_list = [Math, Physics, Chemistry, Biology, Geography]
+# print(Grade_list)
 
-Mean = sum(Grade_list)/len(Grade_list)
+# Mean = sum(Grade_list)/len(Grade_list)
 
-print("Hello,{name},your average grade in the 5 subjects is {grade} %.".format( name=Name, grade=round(Mean,1)))
+# print("Hello,{name},your average grade in the 5 subjects is {grade} %.".format( name=Name, grade=round(Mean,1)))
 
+# automatically adding subjects to list
+# Create empty list
+subjects = []
+
+# store the marks in a list
+subjects.append(Math)
+subjects.append(Physics)
+subjects.append(Chemistry)
+subjects.append(Biology)
+subjects.append(Geography)
+
+print(subjects)
