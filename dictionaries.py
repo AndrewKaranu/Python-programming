@@ -12,6 +12,10 @@ print(dict1["Model"])
 print(dict1["IOS"])       
 print(dict1["Ports"])     
 
+# Finding a specific value within a string in a value of a key
+dict2 = {"Vendor": "cisco", "Model": "2600", "IOS": [12.3, 14.0, 15.6,16.1],"Ports": "4"}
+print(dict2["IOS"][2])
+
 # Adding a new key-value pair  
 # Insert-> RAM: 128
 dict1["RAM"] = "128"
@@ -43,5 +47,6 @@ print(list(dict1.values()))
 # items() -> obtains a list of tuples with each key & value in the dictionary in it
 print(dict1.items()) 
 print(list(dict1.items()))
+
 
 # Python Conditionals if/elif/else
