@@ -128,13 +128,13 @@ list4 = ["CSS", "SQL", "GO", "Kotlin", "Rust"]
 print(list4[3] , list4.index("Kotlin"))
     
 
-Name = input("what is your name?")
-Math = float(input("What is your math grade?"))
-Physics = float(input("what is your physics grade?"))
-Chemistry = float(input("What is your chemistry grade?"))
-Biology = float(input("What is your biology grade?"))
-Geography = float(input("What is your geography grade?"))
-Sum = float(Math + Physics + Chemistry + Biology + Geography)
+# Name = input("what is your name?")
+# Math = float(input("What is your math grade?"))
+# Physics = float(input("what is your physics grade?"))
+# Chemistry = float(input("What is your chemistry grade?"))
+# Biology = float(input("What is your biology grade?"))
+# Geography = float(input("What is your geography grade?"))
+# Sum = float(Math + Physics + Chemistry + Biology + Geography)
 
 # Grade_list = [Math, Physics, Chemistry, Biology, Geography]
 # print(Grade_list)
@@ -145,13 +145,38 @@ Sum = float(Math + Physics + Chemistry + Biology + Geography)
 
 # automatically adding subjects to list
 # Create empty list
-subjects = []
+# subjects = []
 
 # store the marks in a list
-subjects.append(Math)
-subjects.append(Physics)
-subjects.append(Chemistry)
-subjects.append(Biology)
-subjects.append(Geography)
+# subjects.append(Math)
+# subjects.append(Physics)
+# subjects.append(Chemistry)
+# subjects.append(Biology)
+# subjects.append(Geography)
 
-print(subjects)
+# print(subjects)
+
+# Create a dictionary
+
+dict1 = {"a":list(range(1,11)), "b":list(range(11,21)), "c":list(range(21,31))}
+print(dict1)
+
+# dict = {letter: list(range((ord(letter) - 96) * 10 + 1, (ord(letter) - 96) * 10 + 11)) for letter in 'abc'}
+# print(dict)
+
+# print out:
+# a has [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# b has [11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+# c has [21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
+
+dict2 = {"a has":list(range(1,11)), "b has":list(range(11,21)), "c has":list(range(21,31))}
+print("a has", dict2["a has"])
+print("b has", dict2["b has"])
+print("c has", dict2["c has"])
+
+for key, value in dict2.items():
+    print(key, value)
+
+#Print out 13
+print(dict2["b has"][2]) 
+

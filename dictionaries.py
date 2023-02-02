@@ -48,5 +48,6 @@ print(list(dict1.values()))
 print(dict1.items()) 
 print(list(dict1.items()))
 
-
-# Python Conditionals if/elif/else
+# Another way to generate dictionaries
+dict3 = dict(a = list(range(1,11)), b = list(range(12,22)))
+print(dict3)
