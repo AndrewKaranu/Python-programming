@@ -180,3 +180,6 @@ for key, value in dict2.items():
 #Print out 13
 print(dict2["b has"][2]) 
 
+# For loop 
+# Write a python program that prints out all the negative odd numbers between the range of 0-51
+
