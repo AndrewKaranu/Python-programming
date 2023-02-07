@@ -183,3 +183,9 @@ print(dict2["b has"][2])
 # For loop 
 # Write a python program that prints out all the negative odd numbers between the range of 0-51
 
+# Create a function to collect user name
+# Create a function to collect user age
+# Create a function to claculate age in seconds
+# Create a function to print out the age in seconds
+
+
