@@ -65,67 +65,67 @@
 # Assignment
 # Strings
 # 1. Write a Python Program that prints the reversed version of a string
-String1 = "My name is Andrew"
-print(String1[::-1])
+# String1 = "My name is Andrew"
+# print(String1[::-1])
 
-# 2. Write a Python program that prints the length of a string s
-print(len(String1))
+# # 2. Write a Python program that prints the length of a string s
+# print(len(String1))
 
-# 3. Write a Python program that prints the character at index i in the string
-print(String1[8])
+# # 3. Write a Python program that prints the character at index i in the string
+# print(String1[8])
 
-# 4. Write a Python program that prints the first and last three characters of the string s as a single string.
-# print(String1[0:3] + String1[14:17])
-print(String1[0:3] + String1[-3:])
+# # 4. Write a Python program that prints the first and last three characters of the string s as a single string.
+# # print(String1[0:3] + String1[14:17])
+# print(String1[0:3] + String1[-3:])
 
-# 5.Write a Python program that prints the string s without the characters located at even indices.
-print(String1[: :2])
+# # 5.Write a Python program that prints the string s without the characters located at even indices.
+# print(String1[: :2])
 
-# 6. Write a Python program that check if a string only contains numbers.
-string2 = "Python is very usefull in 2022"
-print(string2.isdigit())
-# isdidit()-> If the string only contains numbers it returns true if not it returns false
+# # 6. Write a Python program that check if a string only contains numbers.
+# string2 = "Python is very usefull in 2022"
+# print(string2.isdigit())
+# # isdidit()-> If the string only contains numbers it returns true if not it returns false
 
-# Write a Python program that prints the string s without the character at index n
-def remove_ele(str, n): #-> defines our new function
-      first_part = str[:n] #-> the start of the string upto the defined index
-      last_part = str[n+1:] #-> the defined index +1 which means the defined index is skipped
-      return first_part + last_part #-> put the two togther
-print(remove_ele(string2, 0)) #Allows you to specify which index you want to exclude
+# # Write a Python program that prints the string s without the character at index n
+# def remove_ele(str, n): #-> defines our new function
+#       first_part = str[:n] #-> the start of the string upto the defined index
+#       last_part = str[n+1:] #-> the defined index +1 which means the defined index is skipped
+#       return first_part + last_part #-> put the two togther
+# print(remove_ele(string2, 0)) #Allows you to specify which index you want to exclude
 
-# 8. Write a Python program that prints the string s with the character curr_char replaced by the character new_char.
-string3 = "Python is used in data science"
-curr_char = string3[0]
-new_char = "W"
-print(string3.replace(curr_char,new_char))
+# # 8. Write a Python program that prints the string s with the character curr_char replaced by the character new_char.
+# string3 = "Python is used in data science"
+# curr_char = string3[0]
+# new_char = "W"
+# print(string3.replace(curr_char,new_char))
 
-# Lists
-# 1. Write a Python program that multiplies all the items in a list by the value of the variable factor.
-list1 = ["Python", "Java", "C#", "HTML", "Swift"]
-print(list1*3)
+# # Lists
+# # 1. Write a Python program that multiplies all the items in a list by the value of the variable factor.
+# list1 = ["Python", "Java", "C#", "HTML", "Swift"]
+# print(list1*3)
 
-# 2. Write a Python program that prints the elements of a list on the same line.
-print(*list1)
+# # 2. Write a Python program that prints the elements of a list on the same line.
+# print(*list1)
 
-# 3. Write a Python program that prints the largest and smallest values in a list
-list2 = [11, 44, 55, 99, 77, 22, 66, 33, 88]
-print(max(*list2),min(*list2))
+# # 3. Write a Python program that prints the largest and smallest values in a list
+# list2 = [11, 44, 55, 99, 77, 22, 66, 33, 88]
+# print(max(*list2),min(*list2))
 
-# 4. Write a Python program that checks if a list is empty or not.
-list3 = []
+# # 4. Write a Python program that checks if a list is empty or not.
+# list3 = []
 
-def check_empty(list):
-    if (len(list)) == 0:
-        print("The list is empty")
-    else:
-        print("The list is not empty")
+# def check_empty(list):
+#     if (len(list)) == 0:
+#         print("The list is empty")
+#     else:
+#         print("The list is not empty")
         
-check_empty(list2)
-check_empty(list3)
+# check_empty(list2)
+# check_empty(list3)
 
-# 5. Write a Python program that prints the elements of a list followed their corresponding indices
-list4 = ["CSS", "SQL", "GO", "Kotlin", "Rust"]
-print(list4[3] , list4.index("Kotlin"))
+# # 5. Write a Python program that prints the elements of a list followed their corresponding indices
+# list4 = ["CSS", "SQL", "GO", "Kotlin", "Rust"]
+# print(list4[3] , list4.index("Kotlin"))
     
 
 # Name = input("what is your name?")
@@ -158,27 +158,27 @@ print(list4[3] , list4.index("Kotlin"))
 
 # Create a dictionary
 
-dict1 = {"a":list(range(1,11)), "b":list(range(11,21)), "c":list(range(21,31))}
-print(dict1)
+# dict1 = {"a":list(range(1,11)), "b":list(range(11,21)), "c":list(range(21,31))}
+# print(dict1)
 
-# dict = {letter: list(range((ord(letter) - 96) * 10 + 1, (ord(letter) - 96) * 10 + 11)) for letter in 'abc'}
-# print(dict)
+# # dict = {letter: list(range((ord(letter) - 96) * 10 + 1, (ord(letter) - 96) * 10 + 11)) for letter in 'abc'}
+# # print(dict)
 
-# print out:
-# a has [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-# b has [11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
-# c has [21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
+# # print out:
+# # a has [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# # b has [11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+# # c has [21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
 
-dict2 = {"a has":list(range(1,11)), "b has":list(range(11,21)), "c has":list(range(21,31))}
-print("a has", dict2["a has"])
-print("b has", dict2["b has"])
-print("c has", dict2["c has"])
+# dict2 = {"a has":list(range(1,11)), "b has":list(range(11,21)), "c has":list(range(21,31))}
+# print("a has", dict2["a has"])
+# print("b has", dict2["b has"])
+# print("c has", dict2["c has"])
 
-for key, value in dict2.items():
-    print(key, value)
+# for key, value in dict2.items():
+#     print(key, value)
 
-#Print out 13
-print(dict2["b has"][2]) 
+# #Print out 13
+# print(dict2["b has"][2]) 
 
 # For loop 
 # Write a python program that prints out all the negative odd numbers between the range of 0-51
@@ -187,5 +187,94 @@ print(dict2["b has"][2])
 # Create a function to collect user age
 # Create a function to claculate age in seconds
 # Create a function to print out the age in seconds
+
+
+# Create a program that gets two numbers from the user and then checks if the sum is even or odd. Improve the prgram to also check if the numbers themselves are odd or even
+
+# def even_odd():
+#     x = int(input("First Number?"))
+#     if x % 2 == 0:
+#      print(f"{x} is even")
+#     elif x % 2 > 0:
+#         print(f"{x} is odd")
+#     y = int(input("Second Number?"))
+#     if y % 2 == 0:
+#      print(f"{y} is even")
+#     elif y % 2 > 0:
+#         print(f"{y} is odd")
+#     sum = x+y
+#     if sum % 2 == 0:
+#      print(f"sum of {x} and {y} is even")
+#     elif sum % 2 > 0:
+#         print(f"sum of {x} and {y} is odd")
+
+
+# One complete statement
+
+# def even_odd():
+#     x = int(input("First Number?"))
+#     if x % 2 == 0:
+#      status = (f"{x} which is even")
+#     elif x % 2 > 0:
+#      status = (f"{x} which is odd")
+#     y = int(input("Second Number?"))
+#     if y % 2 == 0:
+#      status2 = (f"{y} which is even")
+#     elif y % 2 > 0:
+#      status2 = (f"{y} which is odd")
+#     sum = x+y
+#     if sum % 2 == 0:
+#      status3 = (f"is even")
+#     elif sum % 2 > 0:
+#      status3 = (f"is odd")
+#     print(f"The sum of {status} and {status2} is {sum} which {status3}.")
+    
+# even_odd()
+    
+    
+        
+
+    
+# 2nd method with multiple functions
+      
+# def checkIfOddorEven(num):
+#     if num % 2 == 0:
+#         status = (f"{num} which is even")
+#     elif num % 2 > 0:
+#         status = (f"{num} which is odd")  
+#     return status
+
+# def checkIfSumisOddorEven(sum):
+#     if sum % 2 == 0:
+#         stutus = (f"{sum} which is even")
+#     elif sum % 2 > 0:
+#         status = (f"{sum} which is odd") 
+#     return status
+
+# def calculateSumOfTwoNumbers():
+#     num1 = int(input("First Number?"))
+#     num2 = int(input("Second Number?"))
+#     sum = num1 + num2
+#     num1_status = checkIfOddorEven(num1)
+#     num2_status = checkIfOddorEven(num2)
+#     return[sum, num1_status, num2_status]
+#     print(sum)
+
+
+# def printResults():
+#     sum = calculateSumOfTwoNumbers()
+#     sum_status = checkIfSumisOddorEven(sum[0])
+#     print(f"The sum of {sum[1]} and {sum[2]} is {sum_status}")
+    
+# printResults()
+
+
+
+
+
+
+
+
+
 
 
