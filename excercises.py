@@ -269,9 +269,13 @@
 # printResults()
 
 
+# string2 = ["123", "QWE", "CBA", "ABC"]
+# string1 = "ABC"
 
-
-
+# if len(string1) == 3 and check(string2)
+#     print("yes")
+# else:
+#     print("no")
 
 
 

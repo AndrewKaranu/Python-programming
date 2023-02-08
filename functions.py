@@ -118,15 +118,51 @@ def createLotteryNumbers():
     return values
   
 
-print(createLotteryNumbers())
         
+# Creat a function to get the lottery from the user
 
+# def get_Player_Numbers():
+#     numbers_csv = (input("Give your 6 numbers separated by a comma"))
+#     six_numbers = numbers_csv.split(",")
+#     print([(int(x) for x in six_numbers)]) ->comprehension
+    
+# get_Player_Numbers()
 
+# or
 
+def get_Player_Numbers():
+    # int_numbers = []
+    set_numbers = set()
+    numbers_csv = (input("Give your 6 numbers separated by a comma: "))
+    six_numbers = numbers_csv.split(",")
+    # for number in six_numbers:
+    #     int_numbers.append(int(number)) #-> converts the list elements into integers
+    # print(int_numbers)
+    for number in six_numbers:
+        set_numbers.add(int(number)) #->converts the list elements into sets
+    return set_numbers
+        
+# create the menu of our program
 
-# string2 = "Python is very usefull in 2022"
-# def remove_ele(str, n): #-> defines our new function
-#       first_part = str[:n] #-> the start of the string upto the defined index
-#       last_part = str[n+1:] #-> the defined index +1 which means the defined index is skipped
-#       return first_part + last_part #-> put the two togther
-# print(remove_ele(string2, 0)) #Allows you to specify which index you want to exclude
+def menu():
+    # ask the user for their numbers
+    user_numbers = get_Player_Numbers()
+    # Generate the lottery(winning) numbers
+    lottery_numbers = createLotteryNumbers()
+    # print out the winnings
+    matched_number = user_numbers.intersection(lottery_numbers)
+    money_won = (100**len(matched_number))
+    print(f"The winning numbers were{lottery_numbers}and you matched {matched_number} and Won Kes{money_won}")
+    
+
+menu()
+
+def menu():
+    # ask the user for their numbers
+    user_numbers = get_Player_Numbers()
+    # Generate the lottery(winning) numbers
+    lottery_numbers = createLotteryNumbers()
+    # print out the winnings
+    matched_number = user_numbers.intersection(lottery_numbers)
+    money_won = (100**len(matched_number))
+    print(f"The winning numbers were{lottery_numbers}and you matched {matched_number} and Won Kes{money_won}")
