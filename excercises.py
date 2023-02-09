@@ -278,7 +278,67 @@
 #     print("no")
 
 
+# Excercise on complex data types
+# 1. Create a list of "person" dictionaries with a name age and a list of hobbies for each person. Fill in any data you want.
+
+person = [
+    {
+        "name": "Andrew Karanu", 
+        "age": 20,
+        "hobbies": ["reading", "coding", "hiking"]
+    },
+    {
+        "name": "Joseph Kimani", 
+        "age": 33,
+        "hobbies": ["reading", "coding", "hiking"]
+    },
+    {
+        "name": "Lucy Nyawira", 
+        "age": 27,
+        "hobbies": ["reading", "coding", "hiking"]},
+    {
+        "name": "Joy Mungai", 
+        "age": 19,
+        "hobbies": ["reading", "coding", "hiking"]
+    }
+    ]
+
+# 2. Use a list comprehension to convert this list of persons into a list of names (of the person)
+names = [people["name"] for people in person]
+print(names)
+
+# 3. Use the list comprehension to check whether all persons are older than 20 years old
+# age_above_20 = [people["age"] for people in person if people["age"] > 20]
+# print(age_above_20)
+
+# Printing false and true 
+# new_list = []
+# for people in person: 
+#     if people["age"] > 20:
+#         new_list.append("True")
+#     else:
+#         new_list.append("False")
+
+# are_older = all(people["age"] > 20 for people in person) #->shows whether all values are true or false
+
+# print(are_older)
+
+are_older = [people["age"] > 20 for people in person] #->shows true or false for each value
+print(are_older)
+        
+# print(new_list)
 
 
+# 4. Copy the list such that you can safely edit the name of the first person(without changing the original list)
+# person2 = person[:] ->doesnt work as the first list will still be affected
+# print(person2)
 
+copied_person = [person.copy() for person in person]
+copied_person[2]["name"] = "Ian"
+print(copied_person)
+# 5. Unpack the persons of the original list into different variables and output these variables
+
+for person in copied_person :
+    name, age, hobbies = person["name"], person["age"], person["hobbies"]
+    print(f"Name: {name}, Age: {age}, Hobbies: {hobbies}")
 
