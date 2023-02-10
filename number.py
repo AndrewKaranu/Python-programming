@@ -1,8 +1,11 @@
 num1 = 10
 num2 = 2.5
 
+
+
 print(type(num1)) #integers
 print(type(num2)) #float
+
 
 # Operations with numbers
 # 1. addition-> +

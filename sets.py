@@ -51,6 +51,9 @@ set4 = {3, 5, 8}
 # you can also sepcify what element you want to remove by specifying it in the pop() function
 # set4.pop()
 # print(set4)
+# 
+# update() -> Adds one set to another
+# print(set3.update(set4))
 
 # clear()-> clears the set
 print(set3.clear())
