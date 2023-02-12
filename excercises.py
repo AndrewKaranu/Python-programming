@@ -323,8 +323,8 @@ print(names)
 
 # print(are_older)
 
-are_older = [people["age"] > 20 for people in person] #->shows true or false for each value
-print(are_older)
+# are_older = [people["age"] > 20 for people in person] #->shows true or false for each value
+# print(are_older)
         
 # print(new_list)
 
@@ -333,12 +333,80 @@ print(are_older)
 # person2 = person[:] ->doesnt work as the first list will still be affected
 # print(person2)
 
-copied_person = [person.copy() for person in person]
-copied_person[2]["name"] = "Ian"
-print(copied_person)
-# 5. Unpack the persons of the original list into different variables and output these variables
+# copied_person = [person.copy() for person in person]
+# copied_person[2]["name"] = "Ian"
+# print(copied_person)
+# # 5. Unpack the persons of the original list into different variables and output these variables
 
-for person in copied_person :
-    name, age, hobbies = person["name"], person["age"], person["hobbies"]
-    print(f"Name: {name}, Age: {age}, Hobbies: {hobbies}")
+# for person in copied_person :
+#     name, age, hobbies = person["name"], person["age"], person["hobbies"]
+#     print(f"Name: {name}, Age: {age}, Hobbies: {hobbies}")
 
+# def add_to_parkone(animal, numberobserved):
+#     if animal in animals_parkone:
+#         animals_parkone[animal]["numberobserved"] += numberobserved
+#     else:
+#         animals_parkone[animal] = {"numberobserved": numberobserved}
+#     print(f"Added {numberobserved} {animal}(s) to animals observed in park one.")
+
+# def add_to_parktwo(animal, numberobserved):
+#     if animal in animals_parktwo:
+#         animals_parktwo[animal]["numberobserved"] += numberobserved
+#     else:
+#         animals_parktwo[animal] = {"numberobserved": numberobserved}
+#     print(f"Added {numberobserved} {animal}(s) to animals observed in park one.")
+# import pickle
+
+# filename = "my_dict.pickle"
+
+# try:
+#     with open(filename, "rb") as f:
+#         my_dict = pickle.load(f)
+#         print("Loaded dictionary from file:", my_dict)
+# except FileNotFoundError:
+#     my_dict = {}
+#     print("Created new empty dictionary")
+
+# while True:
+#     key = input("Enter a key: ")
+#     value = input("Enter a value: ")
+#     my_dict[key] = value
+#     print("Added key-value pair:", key, "-", value)
+
+#     another = input("Do you want to enter another key-value pair? (y/n) ")
+#     if another.lower() != "y":
+#         break
+
+# with open(filename, "wb") as f:
+#     pickle.dump(my_dict, f)
+#     print("Saved dictionary to file:", my_dict)
+
+# dict1 = {'a': 1, 'b': 2, 'c': 3}
+# dict2 = {'b': 4, 'c': 5, 'd': 6}
+
+# unique_keys = set(dict1.keys()) | set(dict2.keys()) - set(dict1.keys()) & set(dict2.keys())
+
+# for key in unique_keys:
+#     print(key)
+
+# Create an empty outer dictionary
+outer_dict = {}
+
+# Prompt user for inner dictionary key-value pair
+inner_key = input("Enter inner dictionary key: ")
+inner_value = input("Enter inner dictionary value: ")
+
+# Create inner dictionary
+inner_dict = {inner_key: inner_value}
+
+# Prompt user for outer dictionary key
+outer_key = input("Enter outer dictionary key: ")
+
+# Add or create key-value pair in outer dictionary
+if outer_key in outer_dict:
+    outer_dict[outer_key].update(inner_dict)
+else:
+    outer_dict[outer_key] = inner_dict
+
+# Print the resulting outer dictionary
+print(outer_dict)
