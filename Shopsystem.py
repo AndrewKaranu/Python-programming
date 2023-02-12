@@ -1,22 +1,22 @@
 import json
 
-# Load inventory from file or create an empty dictionary if file does not exist
-try:
+try: #Creates or updates the inventory.json to prevent the dictionary frombeing overwritten
     with open("inventory.json", "r") as f:
         inventory = json.load(f)
 except FileNotFoundError:
     inventory = {}
 
-def save_inventory():
+def save_inventory(): 
     with open("inventory.json", "w") as f:
         json.dump(inventory, f)
 
-def exit_gracefully():
+def exit_gracefully(): #Allows for the program to stop without interapting program execution and leaving resources in an unexpected state.
     print("Saving inventory...")
     save_inventory()
     print("Goodbye!")
     exit()
 
+# Takes the item chosen quantity and ammount given by customer as input and outputs total cost inclusive of VAT and customer change
 def checkout(inventory, items, ammount):
     total_cost = 0.0
     for item in items:
@@ -34,14 +34,15 @@ def checkout(inventory, items, ammount):
     print(f"Total cost: ${total_cost_VAT}")
     print(f"The customers change is {change}")
     
-
+# Adds items, quantity anf price toinventory
 def add_to_inventory(item, quantity, price):
     if item in inventory:
         inventory[item]["quantity"] += quantity
     else:
         inventory[item] = {"quantity": quantity, "price": price}
     print(f"Added {quantity} {item}(s) to inventory.")
-
+    
+# Removes a whole item or a certain amount of an item from inventory
 def remove_from_inventory(item, quantity):
     if item in inventory and inventory[item]["quantity"] >= quantity:
         inventory[item]["quantity"] -= quantity
@@ -51,12 +52,13 @@ def remove_from_inventory(item, quantity):
     else:
         print(f"Item {item} not found in inventory.")
 
+# Prints put the inventory
 def print_inventory():
     print("Inventory:")
     for item, details in inventory.items():
         print(f"{item} - Quantity: {details['quantity']}, Price: ${details['price']}")
 
-items = {}
+items = {} #empty list to temporarily store items in checkout
 while True:
     print("Please choose an option:")
     print("1. Checkout")
@@ -73,6 +75,7 @@ while True:
                 break
             quantity = int(input("Enter the quantity: "))
             items[item] = quantity
+            print(f"The items in your cart are {items}")
             change = int(input("How much did the customer give?"))
         checkout(inventory, items, change)
         items = {}  
