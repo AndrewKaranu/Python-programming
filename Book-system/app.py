@@ -1,4 +1,5 @@
 from utils import database
+
 USER_CHOICE = """"
 Enter: 
 - 'a' to add new book
@@ -11,17 +12,22 @@ Enter choice: """
 
 
 def add_Book():
-    name = input("Enter the new movies title: ")
-    author = input("Enter the movies director: ")
+    name = input("Enter the new book title: ")
+    author = input("Enter the books author: ")
     database.add_book(name, author)
         
 
-def lis_books():
-    pass
-
-# A function that asks the user for book name and changes it to read in our list
-def prompt_read_book():
-    pass
+def list_books():
+    database.list_books()
+    
+def book_read():
+    book_name = input("Enter the name of the book you would like to mark as read: ")
+    database.mark_book_as_read(book_name)
+    
+def book_delete():
+    book_name = input("Enter the name of the book you would like to delete ")
+    database.delete_books(book_name)
+    
 
 # Deletes a book when given name
 def delete_books():
@@ -34,14 +40,17 @@ def menu():
     while user_input != 'q':
         if user_input == 'a':
            add_Book()
-        elif selection == "2":
-            pass
+        elif user_input == "l":
+            list_books()
             
-        elif selection == '5':
-            pass
+        elif user_input == 'r':
+            book_read()
+        elif user_input == 'd':
+            book_delete()
         else:
             print("Invalid choice, please try again")
-        selection = input(USER_CHOICE)
+        user_input = input(USER_CHOICE)
+    
     
     
 menu()
