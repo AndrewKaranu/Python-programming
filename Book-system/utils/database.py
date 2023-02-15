@@ -44,17 +44,25 @@ def add_book(name, author):
 
 # Create a function that displays all the books to the user
 def list_books():
-    for book in books:
+    s = "" if len(books) == 1 else "s"
+    print(f"There are {len(books)} book{s} at the moment")
+    for index, book in enumerate(books):
         name = book['name']
         author = book['author']
         read = book['read']
         read_status = 'Read' if read else 'Not read'
-        print(f"{name} by {author} ({read_status})")
+        print(f"{index +1}. {name} by {author} ({read_status})")
+        
+# With open(books, 'r') as f
+    # all_books = [book.strip("\n",split(",") for book in f.readlines()]
+    
+# return [
+    # {"name": book[0], "author":book[1], "read":book[3]2} for book in all_books
 
 def mark_book_as_read(name):
     for book in books:
         if book["name"] == name:
-            book["read"] == True
+            book["read"] = True
             print(f"{name} has been marked as read")
             save_books()
             return
@@ -68,3 +76,7 @@ def delete_books(name):
             save_books()
             return
     print(f"Could not find book with name {name}.")
+    
+# Del books with listcomprehension
+# def del_book(name):
+    # books = [book for book in books if book['name'].lower() != name.lower()]

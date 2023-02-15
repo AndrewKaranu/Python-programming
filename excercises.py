@@ -389,24 +389,34 @@ print(names)
 # for key in unique_keys:
 #     print(key)
 
-# Create an empty outer dictionary
-outer_dict = {}
+# # Create an empty outer dictionary
+# outer_dict = {}
 
-# Prompt user for inner dictionary key-value pair
-inner_key = input("Enter inner dictionary key: ")
-inner_value = input("Enter inner dictionary value: ")
+# # Prompt user for inner dictionary key-value pair
+# inner_key = input("Enter inner dictionary key: ")
+# inner_value = input("Enter inner dictionary value: ")
 
-# Create inner dictionary
-inner_dict = {inner_key: inner_value}
+# # Create inner dictionary
+# inner_dict = {inner_key: inner_value}
 
-# Prompt user for outer dictionary key
-outer_key = input("Enter outer dictionary key: ")
+# # Prompt user for outer dictionary key
+# outer_key = input("Enter outer dictionary key: ")
 
-# Add or create key-value pair in outer dictionary
-if outer_key in outer_dict:
-    outer_dict[outer_key].update(inner_dict)
-else:
-    outer_dict[outer_key] = inner_dict
+# # Add or create key-value pair in outer dictionary
+# if outer_key in outer_dict:
+#     outer_dict[outer_key].update(inner_dict)
+# else:
+#     outer_dict[outer_key] = inner_dict
 
-# Print the resulting outer dictionary
-print(outer_dict)
+# # Print the resulting outer dictionary
+# print(outer_dict)
+
+# My_dict = {"Name" : "Andrew", "Name" : "John", "Name" : "Greg"}
+
+# user_input = input("What value would you like to delte")
+
+# for word in My_dict:
+#     if My_dict["Name"] == user_input:
+#         del My_dict["Name"]
+        
+# print(My_dict)

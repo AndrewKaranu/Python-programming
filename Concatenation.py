@@ -22,6 +22,7 @@
 
 # first_name = "Andrew"
 # last_name = "Karanu"
-# user_names = input("please....: ")
-# user_names = user_names.split(",")
+user_names = input("please....: ")
+user_name = user_names.split(",")
 # print(user_names[0].capitalize() + " " + user_names[1].capitalize())
+print(user_name)

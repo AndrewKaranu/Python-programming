@@ -76,37 +76,6 @@
     
 
         
-running = True
-while running:
-    print("Please Choose from the Menu?")
-    print("1. Add input")
-    print("2. Output data")
-    print("d. Delete")
-    print("q. Quit")
-    user_choice = input("Enter your choice: ")
-    if user_choice == "1":
-        data_To_Store = input("Please provide your input: ")
-        with open("sample.txt", "a") as f:
-            f.write(data_To_Store)
-            # f.write("\n")
-    elif user_choice == "2":
-        with open("sample.txt", "r") as f:
-            content = f.readlines()
-            print(content)
-    elif user_choice == "d":
-        import os, sys
-        file_to_delete = input(str("Which file would you like to delete? "))
-        os.remove(file_to_delete)
-    elif user_choice == "q":
-        running = False
-    
-    
-
-# import pickle,json
-# # json.loads -> Json to python
-# # json.dumps -> Python to Json
-
-# User_input_list = []
 # running = True
 # while running:
 #     print("Please Choose from the Menu?")
@@ -117,21 +86,52 @@ while running:
 #     user_choice = input("Enter your choice: ")
 #     if user_choice == "1":
 #         data_To_Store = input("Please provide your input: ")
-#         User_input_list.append(data_To_Store)
-#         with open("sample.txt", "w") as f:
-#             for content in User_input_list:
-#                 f.write(json.dumps(User_input_list))
+#         with open("sample.txt", "a") as f:
+#             f.write(data_To_Store)
+#             # f.write("\n")
 #     elif user_choice == "2":
 #         with open("sample.txt", "r") as f:
-#             file_contents = json.loads(f.read())
-#             for line in file_contents:
-#                 print(file_contents)
+#             content = f.readlines()
+#             print(content)
 #     elif user_choice == "d":
 #         import os, sys
 #         file_to_delete = input(str("Which file would you like to delete? "))
 #         os.remove(file_to_delete)
 #     elif user_choice == "q":
 #         running = False
+    
+    
+
+# import pickle,json
+# # json.loads -> Json to python
+# # json.dumps -> Python to Json
+import json
+User_input_list = []
+running = True
+while running:
+    print("Please Choose from the Menu?")
+    print("1. Add input")
+    print("2. Output data")
+    print("d. Delete")
+    print("q. Quit")
+    user_choice = input("Enter your choice: ")
+    if user_choice == "1":
+        data_To_Store = input("Please provide your input: ")
+        User_input_list.append(data_To_Store)
+        with open("sample.txt", "w") as f:
+            for content in User_input_list:
+                f.write(json.dumps(User_input_list))
+    elif user_choice == "2":
+        with open("sample.txt", "r") as f:
+            file_contents = json.loads(f.read())
+            for line in file_contents:
+                print(file_contents)
+    elif user_choice == "d":
+        import os, sys
+        file_to_delete = input(str("Which file would you like to delete? "))
+        os.remove(file_to_delete)
+    elif user_choice == "q":
+        running = False
 
 
 
