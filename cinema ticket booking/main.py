@@ -1,6 +1,7 @@
 import random
 import string
 import sqlite3
+from fpdf import FPDF
 
 class User:
     """Represents a user that buys a cinema ticket"""
@@ -12,8 +13,8 @@ class User:
         if seat.is_free():
             if card.validate(price = seat.get_price()):
                 seat.occupy()
-                ticket = Ticket(user = self, price = seat.get_price, seat_number=seat.seat_id)
-                ticket.to_pdf
+                ticket = Ticket(user=self, price=seat.get_price(), seat_number=seat.seat_id)
+                ticket.to_pdf()
                 return "Purchase was successful!!"
             else:
                 return "There was a problem with your card"
@@ -25,7 +26,7 @@ class Seat:
     database = "cinema.db"
     
     def __init__(self, seat_id):
-        self.seat = seat_id
+        self.seat_id = seat_id
     
     def get_price(self):
         """Get the price of a specified seat"""
@@ -53,11 +54,12 @@ class Seat:
         cursor.execute(query, [self.seat_id])
         # fetch results
         result = cursor.fetchall()[0][0]
-        # checkif seat is taken or not
-        if result  == 0:
+        # check if seat is taken or not
+        if result == 0:
             return True
         else:
             return False
+    
     def occupy(self):
         """Changes the value of taken in the database from 0 to 2 if the seat is free"""
         if self.is_free():
@@ -66,15 +68,11 @@ class Seat:
             # Create a cursor
             cursor = connection.cursor()
             # create a query/sql statement
-            query = "UPDATE seat SET taken = ? WHERE = ?"
+            query = "UPDATE seat SET taken = ? WHERE seat_id = ?"
             # Execute our query
             cursor.execute(query, [1, self.seat_id])
             # Commit changes to the database
-            connection.commit()
-            # Close the db connection
-            connection.close()
-          
-       
+            connection.commit()   
     
 
 class Card:
@@ -107,6 +105,8 @@ class Card:
                 cursor.execute(query, [balance - price, self.number, self.cvc])
                 connection.commit()
                 connection.close()
+                return True
+        
 
 class Ticket:
     def __init__(self, user, price, seat_number):
@@ -116,7 +116,40 @@ class Ticket:
         self.seat_number = seat_number
         
     def to_pdf(self):
-        pass
+        """Represents a cinema ticket purchase by a user"""
+        pdf = FPDF(orientation="p", unit="pt", format="a4")
+        pdf.add_page()
+        
+        pdf.image(r"C:\Users\user\Desktop\Python programming\cinema ticket booking\images.png", x = None, y = None, w = 0, h = 0, type = '', link = '')
+        pdf.set_font(family="Times", style="B", size=24)
+        pdf.cell(w=0, h=80, txt= "Your digital ticket", border=1, ln=1, align="c")
+        
+        pdf.set_font(family="Times", style="B", size=14)
+        pdf.cell(w=100, h=25, txt="Names: ", border=1)
+        pdf.set_font(family="Times", style="B", size=12)
+        pdf.cell(w=0, h=25, txt=self.user.name, border=1, ln=1)
+        
+        pdf.set_font(family="Times", style="B", size=14)
+        pdf.cell(w=100, h=25, txt="Ticket ID: ", border=1)
+        pdf.set_font(family="Times", style="B", size=12)
+        pdf.cell(w=0, h=25, txt=self.id, border=1, ln=1)
+        pdf.cell(w=0, h=5, txt="", border=1, ln=1)
+        
+        pdf.set_font(family="Times", style="B", size=14)
+        pdf.cell(w=100, h=25, txt="Price: ", border=1)
+        pdf.set_font(family="Times", style="B", size=12)
+        pdf.cell(w=0, h=25, txt=f"{self.price}", border=1, ln=1)
+        pdf.cell(w=0, h=5, txt="", border=1, ln=1)
+        
+        pdf.set_font(family="Times", style="B", size=14)
+        pdf.cell(w=100, h=25, txt="Seat number: ", border=1)
+        pdf.set_font(family="Times", style="B", size=12)
+        pdf.cell(w=0, h=25, txt=self.seat_number, border=1, ln=1)
+        pdf.cell(w=0, h=5, txt="", border=1, ln=1)
+        
+        
+        
+        pdf.output(f"{self.user.name}-{self.seat_number}.pdf")
     
 name = input("Enter your full names: ")
 seat_id = input("Preffered seat number: ")

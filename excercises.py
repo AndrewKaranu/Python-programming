@@ -305,7 +305,7 @@ person = [
 
 # 2. Use a list comprehension to convert this list of persons into a list of names (of the person)
 names = [people["name"] for people in person]
-print(names)
+# print(names)
 
 # 3. Use the list comprehension to check whether all persons are older than 20 years old
 # age_above_20 = [people["age"] for people in person if people["age"] > 20]
@@ -420,3 +420,23 @@ print(names)
 #         del My_dict["Name"]
         
 # print(My_dict)
+
+
+# class Solution(object):
+# def isPalindrome():
+#        x = int(input("Enter a number"))
+#        x = str(x)
+#        if x == x[::-1]:
+#            print(True)
+#        else:
+#            print(False)
+       
+# isPalindrome()
+import random
+def print_to_100():
+    if random.randint(0, 100) % 2 == 0:
+        print(list(range(100)))
+    else:
+        print("Not your time")
+    
+print_to_100()

@@ -8,7 +8,6 @@
 # A function that will great somebody
 def great_User():
     print("Hello everyone")
-
 # great_User()
 
 

@@ -1,0 +1,18 @@
+1.To install Django:
+    python -m pip install python Django
+2. Create a django project
+    django-admin startproject <projectname>
+3. To run or server upyour project:
+    python manage.py runserve
+4.To stop the server:
+    use ctrl + c
+5. To create an app inside django project:
+    python manage.py startapp <appname>
+6. To make migrations:
+    Python manage.py makemigrations
+7. To migrate your migrations:
+    python manage.py migrate
+8. To create a superuser:
+    python manage.py createsuperuser
+
+    regex 

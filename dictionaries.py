@@ -3,16 +3,7 @@
 dict1 = {}
 # print(dict1, type(dict1)) 
 
-dict1 = {"Vendor": "cisco", "Model": "2600", "IOS": "12.4","Ports": "4"}
-
-# Dictionary methods
-# Indexing a value using its key
-print(dict1["Vendor"])       
-print(dict1["Model"])       
-print(dict1["IOS"])       
-print(dict1["Ports"])   
-# You can also use
-print(dict1.get("Model"))  
+ 
 
 # Finding a specific value within a string in a value of a key
 dict2 = {"Vendor": "cisco", "Model": "2600", "IOS": [12.3, 14.0, 15.6,16.1],"Ports": "4"}
