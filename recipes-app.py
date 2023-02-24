@@ -9,11 +9,15 @@ url = "https://api.edamam.com/api/recipes/v2?type=public&q={recipe}&app_id=514c0
 # -> The link is used to access the information on the recipes. By changing the key word in the link with the use input we can search for all recipes with on link
 recipe_request = requests.get(url)  #->request information from the link
 
-print(recipe_request.status_code) #->prints the status code to determine if the api is working
+# print(recipe_request.status_code) #->prints the status code to determine if the api is working
 
 # print(recipe_request.json())
 
 recipes = recipe_request.json() #->Request the information of the recipes in json form
-print(recipes["count"])
-print(recipes["hits"][0]["recipe"]["label"])
+# print(recipes["count"])
+recipe_name = (recipes["hits"][0]["recipe"]["label"])
+ingredients = (recipes["hits"][0]["recipe"]["ingredientLines"])
+ingredients_string = ", \n- ".join(ingredients)
+print(recipe_name)
+print(ingredients_string)
 
