@@ -432,11 +432,33 @@ names = [people["name"] for people in person]
 #            print(False)
        
 # isPalindrome()
-import random
-def print_to_100():
-    if random.randint(0, 100) % 2 == 0:
-        print(list(range(100)))
-    else:
-        print("Not your time")
+# import random
+# def print_to_100():
+#     if random.randint(0, 100) % 2 == 0:
+#         print(list(range(100)))
+#     else:
+#         print("Not your time")
     
-print_to_100()
+# print_to_100()
+
+
+
+
+def maxicount():
+    num = [-1,2,-3,4,5]
+    posnum = []
+    negnum = []
+    for number in num:
+        if number > 0:
+            posnum = number
+        elif number < 0:
+            negnum = number
+            
+    # posnums = len(posnum)  
+    # negnums = len(negnum) 
+    # if posnums > negnums:
+    #     print(posnums)
+    # else:
+    #     print(negnums)
+    
+maxicount()

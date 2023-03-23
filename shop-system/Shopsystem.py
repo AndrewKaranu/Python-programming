@@ -22,9 +22,8 @@ def checkout(inventory, items, ammount):
     for item in items:
         if item in inventory and inventory[item]["quantity"] >= items[item]:
             inventory[item]["quantity"] -= items[item]
-            total_cost += inventory[item]["price"] * items[item]
-            VAT = 0.16*total_cost
-            total_cost_VAT = total_cost+VAT
+            item_cost = inventory[item]["price"]*0.16 + inventory[item]["price"]
+            total_cost_VAT = item_cost * items[item]
             change = ammount-total_cost_VAT
             
         elif item in inventory and inventory[item]["quantity"] < items[item]:
@@ -72,11 +71,13 @@ while True:
         while True:
             item = input("Enter an item (or 'done' to finish): ")
             if item == "done":
+                change = int(input("How much did the customer give?"))
                 break
             quantity = int(input("Enter the quantity: "))
             items[item] = quantity
             print(f"The items in your cart are {items}")
-            change = int(input("How much did the customer give?"))
+            
+            
         checkout(inventory, items, change)
         items = {}  
     elif choice == "2":
